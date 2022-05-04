@@ -151,6 +151,6 @@ class _AddPetScreenState extends State<AddPetScreen> {
       "petWeight": addedPet.weight,
       "petBreed": addedPet.breed,
       "vaccination": addedPet.vaccinationDates
-    });
+    }).catchError((error)=>print("Unable to add pet due to $error"));
   }
 }
